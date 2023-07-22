@@ -35,7 +35,7 @@ class Anura {
         return anuraPartial;
     }
 
-    apps: any = {};
+    apps: Record<string, App> = {};
     Version = "0.2.0 alpha";
     logger = {
         log: console.log.bind(console, "anuraOS:"),
@@ -65,8 +65,7 @@ class Anura {
     }
     ContextMenu = ContextMenuAPI;
     removeStaleApps() {
-        for (const appName in anura.apps) {
-            const app = anura.apps[appName];
+        for (const app of Object.values(anura.apps)) {
             app.windows.forEach((win: any) => {
                 if (!win.element.parentElement) {
                     app.windows.splice(app.windows.indexOf(win));
