@@ -373,6 +373,7 @@ class WMWindow {
     }
     unminimize() {
         this.element.style.display = "";
+        this.focus();
     }
 }
 
