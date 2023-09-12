@@ -16,16 +16,16 @@ import * as crypto from "crypto";
 
 /* import Tracker from "@openreplay/tracker/cjs"; */
 
-import Tracker from "@openreplay/tracker";
+/* import Tracker from "@openreplay/tracker"; */
 
 /* const tracker = new Tracker({
     projectKey: "tIJ4CGGaKdov632Zxiwh",
 }); */
 
-const tracker = new Tracker({
+/* const tracker = new Tracker({
     projectKey: "tIJ4CGGaKdov632Zxiwh",
 });
-tracker.start();
+tracker.start(); */
 
 const useAuth = process.argv.includes("--auth");
 const useParanoidAuth = process.argv.includes("--paranoid-auth");
