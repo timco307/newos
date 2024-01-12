@@ -14,6 +14,19 @@ import { readFileSync } from "fs";
 
 import * as crypto from "crypto";
 
+/* import Tracker from "@openreplay/tracker/cjs"; */
+
+/* import Tracker from "@openreplay/tracker"; */
+
+/* const tracker = new Tracker({
+    projectKey: "tIJ4CGGaKdov632Zxiwh",
+}); */
+
+/* const tracker = new Tracker({
+    projectKey: "tIJ4CGGaKdov632Zxiwh",
+});
+tracker.start(); */
+
 const useAuth = process.argv.includes("--auth");
 const useParanoidAuth = process.argv.includes("--paranoid-auth");
 // paranoid auth requests the user to send the server a passkey instead of a password, it's recommended to generate this passkey
@@ -34,6 +47,15 @@ function cryptoRandom() {
     const randomFloat = randomValue / Math.pow(2, 8);
     return randomFloat;
 }
+
+/* function MyApp() {
+    useEffect(() => {
+        // use componentDidMount in case of React Class Component
+        tracker.start();
+    }, []);
+
+    //...
+} */
 
 function shutdown() {
     console.log();
